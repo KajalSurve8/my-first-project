@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection</title>
+    <style>
+        .submit-button {
+        background-color: #01a70ffd;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        display: inline-block;
+        }
+
+        input{
+		text-align: left;
+		width: 20em;
+	    }
+        
+        label{
+            width: 200px;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+    <form align="center" action="/landingpage" method="POST">
+        {% csrf_token %}
+        <h1>Product information</h1><br>
+        <!-- <div class="row mb-3"></div>
+        <label></label>
+        <div><br><br> -->
+        <div class="row mb-3">
+          <label>Product Name</label>
+          <input type="text" class="form-control" id="pname" name="pname" size="20" >
+        </div><br><br>
+        <div class="row mb-3">
+          <label>Batch ID</label>
+            <input type="text" class="form-control" id="batchid" name="batchid" size="20">
+        </div><br><br>
+        <div class="row mb-3">
+            <label>Lot Number</label>
+              <input type="text" class="form-control" id="lotno" name="lotno" size="20">
+          </div><br><br>
+          <div class="row mb-3">
+            <label>Manufacturing Date</label>
+              <input type="date" class="form-control" id="mandate" name="mandate">
+          </div><br><br>
+          <div class="row mb-3">
+            <label>Expiry Date</label>
+              <input type="date" class="form-control" id="exdate" name="exdate">
+          </div><br><br>
+          <div class="row mb-3">
+            <label>Protocol ID</label>
+              <input type="text" class="form-control" id="protocolid" name="protocolid" size="20">
+          </div><br><br>
+        <button type="submit" class="submit-button">Submit</button>
+        <!-- <input type="submit" value="Submit" class="submit-button"></input> -->
+      </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection</title>
+    <style>
+        .submit-button {
+        background-color: #01a70ffd;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        display: inline-block;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+    <form align="center" action="/home">
+        {% csrf_token %}
+    <h1 align="center">The data has been saved successfully.</h1>
+    Go back to data collection page:
+    <button type="submit" class="submit-button">Home Page</button>
+    <!-- <input type="submit" value="Home Page" class="submit-button"></input> -->
+</form>
+</body>
+</html>
+
+
